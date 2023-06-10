@@ -1,0 +1,41 @@
+name: 🚀 Deploy website on push
+
+on:
+    push:
+        branches: ['master']
+
+jobs:
+    build:
+        name: Build NodeJS with Webpack
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [14.x, 16.x, 18.x]
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+
+            - name: Build
+              run: |
+                  npm install
+                  npx webpack
+
+    # web-deploy:
+    #   name: 🎉 Deploy
+    #   runs-on: ubuntu-latest
+    #   steps:
+    #   - name: 🚚 Get latest code
+    #     uses: actions/checkout@v3
+
+    #   - name: 📂 Sync files
+    #     uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    #     with:
+    #       server: ftp.samkirkland.com
+    #       username: myFtpUserName
+    #       password: ${{ secrets.ftp_password }}
