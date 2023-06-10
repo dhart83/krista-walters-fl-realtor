@@ -16,7 +16,6 @@ const App = () => {
     }
     const links = {
         Home: '/',
-        About: '#bio-section',
         Contact: './contact'
     }
 
