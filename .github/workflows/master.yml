@@ -24,6 +24,7 @@ jobs:
 
             - name: List output files
               run: ls
+              working-directory: client
               # run: find view/ -print
 
             - name: 📂 Sync files
