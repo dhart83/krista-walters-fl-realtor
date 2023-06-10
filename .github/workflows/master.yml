@@ -1,7 +1,7 @@
+name: 🚀 Deploy website on push
 on:
     push:
         branches: ['master']
-name: 🚀 Deploy website on push
 jobs:
     web-deploy:
         name: 🎉 Deploy
@@ -17,7 +17,7 @@ jobs:
                   cache: 'npm'
                   cache-dependency-path: ./client/package-lock.json
 
-            - name: 🔨 Build Project
+            # - name: 🔨 Build Project
             - run: npm install
               working-directory: client
             - run: npm run build --if-present
