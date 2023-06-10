@@ -14,7 +14,9 @@ jobs:
                 node-version: [18.x]
 
         steps:
+            - name: 🚚 Get latest code
             - uses: actions/checkout@v3
+
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v3
               with:
@@ -25,8 +27,6 @@ jobs:
               working-directory: client
             - run: npm run build --if-present
               working-directory: client
-            - name: 🚚 Get latest code
-              uses: actions/checkout@v3
 
             - name: 📂 Sync files
               uses: ./client
