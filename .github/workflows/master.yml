@@ -23,9 +23,9 @@ jobs:
               working-directory: client
 
             - name: List output files
-              run: ls
+              # run: ls
+              run: find view/ -print
               working-directory: client/view/
-              # run: find view/ -print
 
             - name: 📂 Sync files
               uses: SamKirkland/FTP-Deploy-Action@v4.3.4
