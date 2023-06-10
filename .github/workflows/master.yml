@@ -10,21 +10,20 @@ jobs:
             - name: 🚚 Get latest code
               uses: actions/checkout@v2
 
-            - name: Use Node.js 18
+            - name: 🔨 Build Project
               uses: actions/setup-node@v2
               with:
                   node-version: 18
                   cache: 'npm'
                   cache-dependency-path: ./client/package-lock.json
 
-            # - name: 🔨 Build Project
             - run: npm install
               working-directory: client
             - run: npm run build --if-present
               working-directory: client
 
             - name: List output files
-              run: find view/ -print
+              run: find build/ -print
 
             - name: 📂 Sync files
               uses: SamKirkland/FTP-Deploy-Action@v4.3.4
