@@ -16,6 +16,8 @@ const seconds = String(currentDate.getSeconds()).padStart(2, '0')
 
 const timestamp = `${year}${month}${day}${hours}${minutes}${seconds}`
 
+const image = require('./src/assets/krista-walters-headshot.jpg')
+
 module.exports = {
     target: 'web',
     devtool: 'cheap-module-source-map',
@@ -72,7 +74,7 @@ module.exports = {
                     `<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16-${timestamp}.png" />`,
                     `<meta property="og:title" content="Krista Walters | Florida Realtor" />`,
                     `<meta property="og:description" content="Your trusted partner in Florida real estate" />`,
-                    `<meta property="og:image" content="./src/assets/krista-walters-headshot.jpg" />`,
+                    `<meta property="og:image" content=${image}/>`,
                     `<meta property="og:url" content="https://kristawaltersflrealtor.com" />`,
                     `<meta property="og:type" content="website" />`
                 ]
