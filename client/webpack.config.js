@@ -29,7 +29,7 @@ module.exports = {
     stats: 'minimal',
     entry: './src/index',
     output: {
-        path: path.resolve(__dirname, '../server/view'),
+        path: path.resolve(__dirname, './view'),
         publicPath: '/',
         filename: `[name]-${timestamp}.js`,
         clean: true
