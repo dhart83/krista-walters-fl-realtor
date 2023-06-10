@@ -14,12 +14,13 @@ jobs:
 
         steps:
             - uses: actions/checkout@v3
+              with:
+                  path: client
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: 'npm'
-                  cache-dependency-path: './client/package-lock.json'
             - run: pwd
             - run: cd client
             - run: pwd
