@@ -16,8 +16,6 @@ const seconds = String(currentDate.getSeconds()).padStart(2, '0')
 
 const timestamp = `${year}${month}${day}${hours}${minutes}${seconds}`
 
-const image = require('./src/assets/krista-walters-headshot.jpg')
-
 module.exports = {
     target: 'web',
     devtool: 'cheap-module-source-map',
