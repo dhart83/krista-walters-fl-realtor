@@ -30,7 +30,7 @@ jobs:
             - name: 📂 Sync files
               uses: SamKirkland/FTP-Deploy-Action@v4.3.4
               with:
-                  server: ftp://donniehartman.com
+                  server: ftp.donniehartman.com
                   username: ${{ secrets.FTP_USERNAME }}
                   password: ${{ secrets.FTP_PASSWORD }}
                   local-dir: client/view/
