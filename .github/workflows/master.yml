@@ -16,9 +16,10 @@ jobs:
                   node-version: '18'
 
             - name: 🔨 Build Project
-              run: |
-                  npm install
-                  npm run build
+            - run: npm install
+              working-directory: client
+            - run: npm run build --if-present
+              working-directory: client
 
             - name: List output files
               run: find view/ -print
