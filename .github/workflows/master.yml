@@ -27,7 +27,7 @@ jobs:
               run: find view/ -print
 
             - name: 📂 Sync files
-              uses: dhart83/FTP-Deploy-Action@4.1.0
+              uses: SamKirkland/FTP-Deploy-Action@v4.3.4
               with:
                   server: ftp://donniehartman.com
                   username: ${{ secrets.FTP_USERNAME }}
