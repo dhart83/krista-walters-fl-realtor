@@ -4,6 +4,11 @@ on:
     push:
         branches: ['master']
 
+env:
+    APP_LOCATION: '/'
+    CLIENT_DIR: 'client'
+    ARTIFACT_LOCATION: 'view'
+
 jobs:
     web-deploy:
         name: 🎉 Deploy
@@ -16,7 +21,7 @@ jobs:
         steps:
             - uses: actions/checkout@v3
 
-            - name: Use Node.js ${{ matrix.node-version }}
+            - name: Build and Deploy
               uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
