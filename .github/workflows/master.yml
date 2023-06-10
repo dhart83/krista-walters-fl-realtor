@@ -24,7 +24,7 @@ jobs:
 
             - name: List output files
               run: ls
-              working-directory: client
+              working-directory: client/view/
               # run: find view/ -print
 
             - name: 📂 Sync files
@@ -33,7 +33,7 @@ jobs:
                   server: ftp://donniehartman.com
                   username: ${{ secrets.FTP_USERNAME }}
                   password: ${{ secrets.FTP_PASSWORD }}
-                  local-dir: view/
+                  local-dir: client/view/
 # name: 🚀 Deploy website on push
 
 # on:
