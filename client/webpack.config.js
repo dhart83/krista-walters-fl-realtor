@@ -74,7 +74,7 @@ module.exports = {
                     `<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16-${timestamp}.png" />`,
                     `<meta property="og:title" content="Krista Walters | Florida Realtor" />`,
                     `<meta property="og:description" content="Your trusted partner in Florida real estate" />`,
-                    `<meta property="og:image" content=${image}/>`,
+                    `<meta property="og:image" content="${image}"/>`,
                     `<meta property="og:url" content="https://kristawaltersflrealtor.com" />`,
                     `<meta property="og:type" content="website" />`
                 ]
