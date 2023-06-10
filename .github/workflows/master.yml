@@ -23,7 +23,7 @@ jobs:
               working-directory: client
 
             - name: List output files
-              run: pwd
+              run: ls
               working-directory: client/view/
               # run: find view/ -print
 
