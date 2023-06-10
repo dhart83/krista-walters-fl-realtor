@@ -1,0 +1,8 @@
+node_modules/
+build/
+dist/
+view/
+.cache/
+.firebase/
+.vscode/
+.env
