@@ -13,7 +13,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'false'
       - run: npm install
       - run: npm run build
       - uses: peaceiris/actions-gh-pages@v3
