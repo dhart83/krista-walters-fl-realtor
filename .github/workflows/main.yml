@@ -25,6 +25,10 @@ jobs:
         run: npm run build
         working-directory: client
 
+      - name: Check build command status
+        run: echo "Build completed"
+        working-directory: client
+
       - name: 📂 Check build output
         run: ls -la
         working-directory: client/build
