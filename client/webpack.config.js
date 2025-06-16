@@ -103,7 +103,7 @@ module.exports = {
                 {
                     from: 'public/*.webmanifest',
                     to: `[name][ext]`,
-                    flatten: true
+                    toType: 'template'
                 },
                 {
                     from: 'public/*.ico',
