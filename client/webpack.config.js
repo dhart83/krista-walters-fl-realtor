@@ -32,7 +32,11 @@ module.exports = {
         path: path.resolve(__dirname, './view'),
         publicPath: '/',
         filename: `[name]-${timestamp}.js`,
-        assetModuleFilename: `[name]-${timestamp}[ext]`,
+        assetModuleFilename: (pathData) => {
+          return pathData.filename.endsWith('.webmanifest')
+            ? '[name][ext]'  // no timestamp for manifest
+            : `[name]-${timestamp}[ext]`;
+        },
         clean: true
     },
     module: {
