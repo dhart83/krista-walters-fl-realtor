@@ -31,7 +31,7 @@ jobs:
 
       - name: 📂 Check build output
         run: ls -la
-        working-directory: client/build
+        working-directory: client/view
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
