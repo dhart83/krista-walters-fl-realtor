@@ -102,7 +102,8 @@ module.exports = {
                 },
                 {
                     from: 'public/*.webmanifest',
-                    to: `[name]-${timestamp}[ext]`
+                    to: `[name][ext]`,
+                    flatten: true
                 },
                 {
                     from: 'public/*.ico',
