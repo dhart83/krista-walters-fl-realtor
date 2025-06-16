@@ -8,7 +8,7 @@ const container = document.getElementById('root')
 const root = createRoot(container)
 
 root.render(
-    <Router>
+    <Router basename="/krista-walters-fl-realtor">
         <App />
     </Router>
 )
