@@ -30,7 +30,7 @@ module.exports = {
     entry: './src/index',
     output: {
         path: path.resolve(__dirname, './view'),
-        publicPath: '/',
+        publicPath: '/krista-walters-fl-realtor/',
         filename: `[name]-${timestamp}.js`,
         assetModuleFilename: (pathData) => {
           return pathData.filename.endsWith('.webmanifest')
